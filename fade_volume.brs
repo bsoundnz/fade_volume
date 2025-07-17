@@ -1,12 +1,12 @@
 ' =============================================================================================================================
 ' fade_volume plugin.  Gradually changes volume of an audio output connector over time in response to UDP message.
 ' Written and tested with HD224, BOS 8.5.47
-' v1.0 (20 Oct 2024)
+' v1.1 (18 July 2025)
 '
 ' HOW TO USE:	Send UDP message on port 6000 "fade_volume!<targetVolume>!<durationMs>" (e.g. "fade_volume!50!5000" to fade to 50% over 5 seconds)
-' REQUIREMENTS:	Presentation must have a Variable called "storedVolume"
-' Can also utiilize an optional Variable called "audioDevice".  Defaults to "analog" if Variable "audioDevice" not found.
-' The variable can take the following strings:
+' REQUIREMENTS:	Presentation must have two user variables:
+' 1: "storedVolume", default value of 100.
+' 2: "audioDevice", with default of one of the following strings:
 '		"hdmi"
 '		"usb" (not tested on HD224)
 '		"spdif"
